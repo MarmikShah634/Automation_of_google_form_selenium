@@ -121,6 +121,8 @@ def screenshot_and_send_mail():
     message = '''
     ### Project Overview: Google Form Automation and Email Notification
 
+    #### Source code at => https://github.com/MarmikShah634/Automation_of_google_form_selenium
+
     #### Objective
     The goal of this project is to automate the process of filling out a Google Form using Selenium WebDriver, capturing a screenshot of the filled form, and sending this screenshot via email using Django's email backend.
 
