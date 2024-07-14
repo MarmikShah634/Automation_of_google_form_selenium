@@ -2,7 +2,6 @@ from datetime import datetime
 from django.core.mail import EmailMessage
 import time
 from django.http import HttpResponse
-from django.shortcuts import render
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -38,8 +37,7 @@ def main(request):
         init_driver()
 
         if driver is None:
-            print("Driver initialization failed.")
-            return render(request, 'your_template.html')
+            return HttpResponse("Driver initialization failed.")
 
         # Open the Google Form
         form_url = "https://docs.google.com/forms/d/e/1FAIpQLSdUCd3UWQ3VOgeg0ZzNeT-xzNawU8AJ7Xidml-w1vhfBcvBWQ/viewform"
